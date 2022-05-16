@@ -14,18 +14,12 @@ class GameScene: SKScene {
         // Make the scene position from its lower left corner, regardless of any other settings.
         self.anchorPoint = .zero
         
-        let mySprite = SKSpriteNode(color: .blue, size: CGSize(width: 50, height: 50))
-        mySprite.position = CGPoint(x: 150, y: 150)
-        mySprite.name = "square"
+        self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
         
-        self.addChild(mySprite)
+        let bee = SKSpriteNode(imageNamed: "bee")
+//        bee.size = CGSize(width: 100, height: 100)
+        bee.position = CGPoint(x: 250, y: 250)
         
-//        let demoAction = SKAction.move(to: CGPoint(x: 300, y: 150), duration: 3)
-        let demoAction1 = SKAction.scale(to: 4, duration: 5)
-        let demoAction2 = SKAction.rotate(byAngle: 5, duration: 5)
-        let actionGroup = SKAction.group([demoAction1, demoAction2])
-        let actionSequence = SKAction.sequence([demoAction1, demoAction2])
-//        mySprite.run(actionGroup)
-        mySprite.run(actionSequence)
+        self.addChild(bee)
     }
 }
